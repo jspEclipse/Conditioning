@@ -13,7 +13,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="bg-[#fffce9]">
-        {typeof window !== "undefined" && (
           <div className="fixed inset-0 overflow-hidden pointer-events-none">
             <ParallaxSquare width={5} x={8} y={10} y2={20} color={green} />
             <ParallaxSquare width={7.5} x={5} y={40} y2={0} color={blue} />
@@ -22,7 +21,6 @@ export default function RootLayout({ children }) {
             <ParallaxSquare width={7.5} x={95} y={20} y2={10} color={green} />
             <ParallaxSquare width={10} x={85} y={70} y2={0} color={blue} />
           </div>
-        )}
         <div className="relative z-10 2xl:text-2xl">{children}</div>
       </body>
     </html>
